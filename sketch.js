@@ -30,7 +30,7 @@ World.add(world,polygon);
 
 imageMode(CENTER)
 image(polygon_image,polygon.position.x,polygon.position.y,40,40);
-slingShot=new Slingshot(this.polygon,{x:100,y:200});
+slingshot = new SlingShot(polygon ,{x:100,y:200});
 
 
 
@@ -47,5 +47,6 @@ function draw() {
   block14.display();
 block15.display();
 block16.display();
+slingshot.display();
   drawSprites();
 }}
