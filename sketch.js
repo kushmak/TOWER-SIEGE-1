@@ -16,19 +16,23 @@ function setup() {
   world=engine.world
 ground= new Ground(width/2,height,width,20)
 
-block8= new Block (330,235,30,40);
-block9= new Block (360,235,30,40);
-block10= new Block (390,235,30,40);
-block11= new Block (420,235,30,40);
-block12= new Block (450,235,30,40);
-block13= new Block (360,195,30,40);
-block14= new Block (390,195,30,40);
-block15= new Block (420,195,30,40);
-block16= new Block (390,155,30,40);
+block8= new Box(330,235,30,40);
+block9= new Box (360,235,30,40);
+block10= new Box(390,235,30,40);
+block11= new Box (420,235,30,40);
+block12= new Box (450,235,30,40);
+block13= new Box (360,195,30,40);
+block14= new Box (390,195,30,40);
+block15= new Box (420,195,30,40);
+block16= new Box (390,155,30,40);
+polygon=Bodies.circle(50,200,20);
+World.add(world,polygon);
+
+imageMode(CENTER)
+image(polygon_image,polygon.position.x,polygon.position.y,40,40);
+slingShot=new Slingshot(this.polygon,{x:100,y:200});
 
 
-
-}
 
 function draw() {
   background(255,255,255);  
@@ -44,4 +48,4 @@ function draw() {
 block15.display();
 block16.display();
   drawSprites();
-}
+}}

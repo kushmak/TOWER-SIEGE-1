@@ -1,4 +1,4 @@
-class box{
+class Box{
   constructor(x,y,width,height) {
     var options = {
         isStatic: false,restitution:0.8,friction:0.4
